@@ -29,13 +29,11 @@ The project demonstrates fundamental concepts of compiler construction including
 ### Required Tasks to Complete
 
 1. **Read the language specification carefully**
-
    - Study the detailed [TyC Specification](tyc_specification.md) document
    - Understand the syntax and semantics of the TyC language
    - Master the lexical and syntax rules
 
 2. **Implement the TyC.g4 file**
-
    - Complete the ANTLR4 grammar file in `src/grammar/TyC.g4`
    - Define lexical rules (tokens)
    - Define parser rules (grammar rules)
@@ -74,13 +72,11 @@ For lexical errors, the lexer must return the following tokens with specific lex
 ### Required Tasks to Complete
 
 1. **Study the AST Node Structure**
-
    - Read carefully all node classes in `src/utils/nodes.py`
    - Understand the AST node hierarchy and their properties
    - Master how different language constructs map to AST nodes
 
 2. **Implement the ASTGeneration Class**
-
    - Create a class `ASTGeneration` in `src/astgen/ast_generation.py`
    - Inherit from `TyCVisitor` (generated from ANTLR4)
    - Override visitor methods to construct appropriate AST nodes
@@ -129,7 +125,7 @@ The `ASTGeneration` class must:
    - Implement **100 test cases** in `tests/test_checker.py`
    - Test all semantic error types and valid programs
    - Cover edge cases and complex semantic scenarios
-   - Verify correct error messages and program validation  
+   - Verify correct error messages and program validation
    - For test layout, see `oplang-compiler/tests/test_checker.py` and the `Checker` wrapper in `tests/utils.py`
 
 ### Semantic Analysis Requirements
@@ -209,30 +205,35 @@ The `StaticChecker` class must:
 ### Setup
 
 1. **Clone the repository:**
+
    ```bash
    cd TyC-compiler
    ```
 
 2. **Check system requirements:**
+
    ```bash
    python3 run.py check
    ```
 
 3. **Set up the environment:**
+
    ```bash
    python3 run.py setup
    ```
 
 4. **Activate virtual environment:**
+
    ```bash
    # On macOS/Linux:
    source venv/bin/activate
-   
+
    # On Windows:
    venv\Scripts\activate
    ```
 
 5. **Build the compiler:**
+
    ```bash
    python3 run.py build
    ```
